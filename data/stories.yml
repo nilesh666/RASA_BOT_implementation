@@ -1,0 +1,184 @@
+version: "3.1"
+
+stories:
+- story: irrelevant deny
+  steps:
+  - intent: deny
+  - action: utter_clarify_deny
+
+- story: thank compliments
+  steps:
+  - intent: compliment
+  - action: utter_welcome
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: investment affirm path
+  steps:
+  - intent: investment
+  - action: utter_investment
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: investment deny path
+  steps:
+  - intent: investment
+  - action: utter_investment
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query
+
+
+- story: project affirm path
+  steps:
+  - intent: projects
+  - action: utter_projects
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: project deny path
+  steps:
+  - intent: projects
+  - action: utter_projects
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query
+
+- story: laws affirm path
+  steps:
+  - intent: laws
+  - action: utter_law
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: laws deny path
+  steps:
+  - intent: laws
+  - action: utter_law
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query
+
+- story: service affirm path
+  steps:
+  - intent: services
+  - action: utter_service
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: service deny path
+  steps:
+  - intent: services
+  - action: utter_service
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query
+
+- story: service affirm path
+  steps:
+  - intent: services
+  - action: utter_service
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: service deny path
+  steps:
+  - intent: services
+  - action: utter_service
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query
+
+- story: contact affirm path
+  steps:
+  - intent: communicate
+  - action: utter_contact_details
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: contact deny path
+  steps:
+  - intent: communicate
+  - action: utter_contact_details
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query
+
+- story: news affirm path
+  steps:
+  - intent: news
+  - action: utter_news
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: news deny path
+  steps:
+  - intent: news
+  - action: utter_news
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query
+
+- story: events affirm path
+  steps:
+  - intent: events
+  - action: utter_event
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: events deny path
+  steps:
+  - intent: events
+  - action: utter_event
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query
+
+- story: ads affirm path
+  steps:
+  - intent: announcements
+  - action: utter_ads
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: ads deny path
+  steps:
+  - intent: announcements
+  - action: utter_ads
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_ask_query

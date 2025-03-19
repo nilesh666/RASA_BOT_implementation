@@ -1,0 +1,335 @@
+#version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - hi, how are you?
+    - مرحبا
+    - أهلاً
+    - صباح الخير
+    - مساء الخير
+    - كيف حالك؟
+    - مرحباً بك
+    - دعنا نذهب
+    - مرحباً يا صديقي
+    - صباح الخير
+    - مساء الخير
+    - كيف حالك اليوم؟
+
+- intent: query
+  examples: |
+    - The link is broken
+    - الرابط معطل
+    - link is not working
+    - الرابط لا يعمل
+    - provided uncessary link
+    - تم توفير رابط غير ضروري
+    - I could not find the information.
+    - لم أتمكن من العثور على المعلومات.
+    - I cannot find anything here
+    - لا أستطيع العثور على أي شيء هنا
+    - i cannot access the link
+    - لا أستطيع الوصول إلى الرابط
+    - i need detailed information.
+    - أحتاج إلى معلومات مفصلة.
+    - it is not the correct link
+    - هذا ليس الرابط الصحيح
+    - link related to investments is not working
+    - الرابط المتعلق بالاستثمارات لا يعمل
+    - investment link is not working
+    - رابط الاستثمار لا يعمل
+    - link related to projects is not working
+    - الرابط المتعلق بالمشاريع لا يعمل
+    - project link is not working
+    - رابط المشروع لا يعمل
+    - nothing is working
+    - لا شيء يعمل
+    - not helping
+    - لا يساعد
+    - The page is not loading
+    - الصفحة لا تتحمل
+    - I got an error while opening the link
+    - حصلت على خطأ أثناء فتح الرابط
+    - The website is down
+    - الموقع معطل
+    - This is the wrong page
+    - هذه هي الصفحة الخاطئة
+    - Can you share the correct link?
+    - هل يمكنك مشاركة الرابط الصحيح؟
+    - I need more clarity on this link
+    - أحتاج إلى مزيد من الوضوح حول هذا الرابط
+    - The given URL is incorrect
+    - عنوان URL المقدم غير صحيح
+    - I am getting a 404 error
+    - أحصل على خطأ 404
+    - The page says "Access Denied"
+    - الصفحة تقول "تم رفض الوصول"
+    - I am redirected to a different site
+    - يتم توجيهي إلى موقع مختلف
+
+
+- intent: investment
+  examples: | 
+    - Where can I invest for Oman?
+    - How to invest?
+    - What are the available investment opportunities?
+    - What is the investment opportunity?
+    - Investment details
+    - Opportunities related to investments
+    - Where to invest?
+    - Details regarding investment
+    - Where can I find investment details?
+    - Opportunities related to investment
+    - What is the best investment options
+    - Give me a list of profitable investment options
+    - How do I start investing with low capital?
+    - Which sectors are good for investment?
+    - Investment plans for long-term growth
+    - What are some risk-free investments?
+    - Can you suggest some investment strategies?
+    - Best investment opportunities 
+    - What are the latest investment trends?
+
+- intent: projects
+  examples: |
+    - Where can I find details on projects?
+    - What are the ongoing projects?
+    - Where are projects?
+    - Projects 
+    - Project details
+    - Details regarding projects
+    - Where can I find the details regarding the projects?
+    - List of upcoming projects
+    - What are some government projects in Oman?
+    - How can I apply for a project?
+    - Are there any new tech projects launching soon?
+    - Explain some trending projects in 2025
+    - Where can I find details about real estate projects?
+    - Ongoing projects in the IT sector
+    - What are the major infrastructure projects happening?
+    - Can you tell me about startup projects?
+    - How do I find details on international projects?
+    - What are some research-based projects I can explore?
+    - Where can I find open-source projects to contribute to?
+    - Are there any community development projects?
+
+
+- intent: laws
+  examples: |
+    - what are the laws 
+    - which laws are there
+    - what is the latest law
+    - is there any legislation
+    - about legislationand laws
+    - laws and legislation that are active
+    - active laws and legislation
+    - where can i find details about laws
+    - laws related to women
+    - Amendments to the Municipal
+    - Municipal laws used
+    - what laws are followed by the municipal
+
+
+- intent: outofscope
+  examples: |
+    - I have pain in my stomach
+    - I have migrains
+    - I like movies
+    - Do you like movies
+    - what is your favorite color
+    - How's the weather today?
+    - What are you up to?
+    - Do you have any pets?
+    - What's your favorite color?
+    - Tell me a joke.
+    - How was your weekend?
+    - If the moon was made of cheese, would you be able to eat it?
+    - I'm bored.
+    - What do you think about politics?
+    - Can you sing a song?
+    - I had a terrible day.
+    - This makes no sense
+    - what happened tomorrow
+    - can you tell me where is the news of tomorrow
+    - what will happen tomorrow
+    - show me tomorrow's news
+    - I am going to save the world
+
+
+- intent: services
+  examples: |
+    - what are the services offered
+    - what service can i get
+    - i need information about services offered
+    - i need detailed information abou a service
+    - where can i find info related to service
+    - what is the service offered 
+    - info about sevice 
+    - about the services
+    
+- intent: communicate
+  examples: |
+    - where can I contact municipality
+    - how to contact the office of governorate
+    - where can i communicate in person
+    - to whom should I communicate
+    - where can i communicate to the officers
+    - how to contact the office
+    - where is the office to communicate
+    - contact details
+    - how to contact the office of municipality
+    - how to contact the governor
+    - how to contact the governor's office
+
+- intent: news
+  examples: |
+    - what happened latest
+    - news about yesterday
+    - can you tell me the latest news
+    - information about latest news
+    - details about news
+    - whare to find news
+    - link to view latest news
+    - where can I read today's news?
+    - show me trending news topics
+    - what's trending in the news?
+
+- intent: events
+  examples: |
+    - where can i find events
+    - where is the schedule for events
+    - details about event schedule
+    - what are the latest events
+    - when are events happening
+    - list of events scheduled
+    - event happenings
+    - list events happening tomorrow
+    - link related to events
+    - detailed information about events
+
+- intent: announcements 
+  examples: | 
+    - what is the latest annoucnement about
+    - what did the governor say yesterday
+    - latest announcements
+    - ads given by the municipal
+    - latest advertisements
+    - trending advertisements
+    - what are the recent ads
+    - where can i find advertisements
+    - details relating to ads
+    - information avialble on the latest announcements
+    - announcements & advertisement
+
+
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - ok
+    - done
+    - double done
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - none
+    - nothing
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+    - i am ok with your help
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - what can you do?
+    - about you
+    - what are you supposed to do?
+
+- intent: thanks
+  examples: | 
+    - thanks
+    - Thank you
+    - i appreciate it
+    - thanks for your help
+
+- intent: compliment
+  examples: |
+    - you did good
+    - nothing you did great
+    - awesome thanks for your help
+    - well done
+    - its great
+    - you helped me
+    - you saved my time

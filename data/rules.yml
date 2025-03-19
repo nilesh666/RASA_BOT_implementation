@@ -1,0 +1,33 @@
+# version: "3.1"
+
+rules:
+- rule: Always greet the user 
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Always avoid irrelavant questions
+  steps:
+  - intent: outofscope
+  - action: utter_misunderst
+
+- rule: Provide contact information whenever the user struggles
+  steps:
+    - intent: query
+    - action: utter_contact 
+
+- rule: Always reply with "Always welcome" whenever the user says Thank you
+  steps:
+    - intent: thanks
+    - action: utter_welcome
+  

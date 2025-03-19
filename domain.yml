@@ -1,0 +1,85 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - query
+  - outofscope
+  - thanks
+  - investment
+  - projects
+  - laws
+  - services
+  - communicate
+  - news
+  - events
+  - announcements 
+  - compliment
+
+responses:
+  utter_greet:
+  - text: "Hello!! ,What can I help with?"
+    
+  utter_ads:
+  - text: "You can find detailed information about ads and announcements here 👉 https://bsgo.gov.om/sbgoweb/EN/medialibrary/events"
+
+  utter_event:
+  - text: "You can find detailed information about events here 👉 https://bsgo.gov.om/sbgoweb/EN/medialibrary/events"
+ 
+  utter_clarify_deny:
+  - text: "I see that you are not satisfied. Can you let me know what's missing?"
+
+  utter_contact_details:
+  - text: "You can find detailed information about commnication here 👉 https://bsgo.gov.om/sbgoweb/EN/help/contact"
+
+  utter_service:
+  - text: "You can find detailed info about the services offered 👉 https://bsgo.gov.om/sbgoweb/AR/service/service"
+
+  utter_news:
+  - text: "You can find details about the latest news here 👉 https://bsgo.gov.om/sbgoweb/EN/medialibrary/latestnews"
+
+  utter_law:
+  - text: "You can find detailed info about the legislation and laws here 👉 https://bsgo.gov.om/sbgoweb/AR/legislationslaws/legislationslaws"
+
+  utter_misunderst:
+  - text: "Sorry I couldn't understand what you are saying. Could you please try to rephrase your question"
+
+  utter_ask_query:
+  - text: "My apologies! Could you please explain what you're having trouble with?"
+
+  utter_investment:
+  - text: "You can find detailed information on investment oppurtunities here 👉 https://bsgo.gov.om/sbgoweb/AR/investmentopportunities/investmentopportunities"
+
+  utter_projects:
+  - text: "You can find all the details about the ongoing projects here 👉 https://bsgo.gov.om/sbgoweb/EN/projects/projects"
+ 
+  utter_contact:
+  - text: "Please email here test@gmail.com with screenshots and all other queries. Our Customer support will get back to you shortly"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_welcome:
+  - text: "Happy to help!"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I'm your virtual assistant. I can help you jump to the link you need and also offer guidance on using the website."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
